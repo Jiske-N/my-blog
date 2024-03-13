@@ -1,0 +1,55 @@
+/* height is set in styles.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    padding-left: 4rem;
+}
+
+#headerright {
+    display: flex;
+    align-items: center;
+}
+
+#headerright #button {
+    height: 4rem;
+    width: 10rem;
+    font-size: 2rem;
+    background-color: var(--background-color-secondary);
+}
+
+/* styling for main which is to be added by js */
+
+/* min height is to maintain stying/appearance not link to min height in child p */
+#blogposts article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border: solid .25rem var(--background-color-secondary);
+    border-radius: 3px;
+    margin: 2rem;
+    min-height: 20rem;
+}
+
+#blogposts article h4 {
+    border-bottom: solid .15rem var(--background-color-secondary);
+    margin: 0 0 1.5rem 0;
+}
+
+/* min height is for positioning within the parent to save making an extra div to house
+if parents min height changes this will need to accordingly */
+#blogposts article p {
+    font-size: 1.6rem;
+    min-height: 9rem;
+    margin: 0 0 1.5rem 2.5rem;
+}
+
+#blogposts article aside {
+    font-size: 1.6rem;
+    font-weight: 700;
+}

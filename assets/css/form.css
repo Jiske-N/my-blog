@@ -1,0 +1,80 @@
+/* height is set in styles.css */
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main {
+    height: 100%;
+    display: flex;
+}
+
+#left {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    border-right: var(--background-color-secondary) solid;
+    margin-right: 0.25rem;
+}
+
+#circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgb(247, 227, 139), rgb(238, 149, 16));
+    border-radius: 100%;
+    width: 50%;
+    padding-top: 50%;
+}
+
+h1 {
+    color: white;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    border-left: var(--background-color-secondary) solid;
+    margin-left: 0.25rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90%;
+}
+
+form h3 {
+    padding: .5rem 0;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+form label {
+    font-size: 1.5rem;
+}
+
+.input {
+    padding: .5rem 0;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: .15rem solid var(--background-color-secondary);
+}
+
+.input:focus {
+    border: .3rem solid lightskyblue;
+}
+
+form textarea {
+    height: 7rem;
+}
+
+form #button {
+    background-color: var(--background-color-secondary);
+}
