@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- links to two css sheets 
+        the first is for common elements between both pages 
+        the second is for styles specific to the index/form/home page -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+</head>
+<body>
+    <header>
+        <button id="toggle" type="button" data-darktoggle="light">Image for dark mode toggle</button>
+    </header>
+    <main>
+        <section id="left">
+            <div id="circle" aria-label="yellow circle image/background">
+                <h1>My First Blog</h1>
+            </div>
+        </section>
+        <section id="right">
+            <form action="addblogpost">
+                <h3>What's on your mind?</h3>
+                <label for="username">Username</label>
+                <input type="username">
+                <label for="title">Title</label>
+                <input type="title">
+                <label for="content">Content</label>
+                <input type="content">
+                <input type="button" value="Submit">
+            </form>
+        </section>
+    </main>
+    <!-- links to two js scripts
+    the first is for elements specific to this page
+    the second is for elements across both pages -->
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/logic.js"></script>
+</body>
+</html>

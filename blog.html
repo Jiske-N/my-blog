@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- links to two css sheets 
+        the first is for common elements between both pages 
+        the second is for styles specific to the blog page -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
+</head>
+<body>
+    <header>
+        <h2>My First Blog</h2>
+        <input id="backbutton" type="button" value="Back">
+        <button id="toggle" type="button" data-darktoggle="light">Image for dark mode toggle</button>
+    </header>
+    <main>
+        <div id="blogposts"></div>
+    </main>
+    <footer>
+        <p id="footertag">Made with love by Jiske</p>
+        <ul id="contactlinks">
+            <li>Portfolio: <a href="">Jiske-N</a></li>
+            <li>Blog: <a href="">Full-Stack Blog</a></li>
+            <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
+        </ul>
+    </footer>
+    <!-- links to two js scripts
+    the first is for elements specific to this page
+    the second is for elements across both pages -->
+    <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/logic.js"></script>
+</body>
+</html>
