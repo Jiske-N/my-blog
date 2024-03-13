@@ -13,18 +13,23 @@
 <body>
     <header>
         <h2>My First Blog</h2>
-        <input id="backbutton" type="button" value="Back">
-        <button id="toggle" type="button" data-darktoggle="light">Image for dark mode toggle</button>
+        <div id="headerright">
+            <input id="button" type="button" value="&#11013 Back ">
+            <!-- sun code &#127774 moon code &#127762 -->
+            <button id="toggle" type="button" data-darktoggle="light">&#127774</button>
+        </div>
     </header>
     <main>
-        <div id="blogposts"></div>
+        <div id="blogposts">
+            <!-- this is to contain the posts added by js -->
+        </div>
     </main>
     <footer>
-        <p id="footertag">Made with love by Jiske</p>
+        <p id="footertag">Made with a <span id="UTF-8style">&#128187</span> by Jiske</p>
         <ul id="contactlinks">
-            <li>Portfolio: <a href="">Jiske-N</a></li>
-            <li>Blog: <a href="">Full-Stack Blog</a></li>
-            <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
+            <li>Portfolio: <a id="externallink" href="https://github.com/Jiske-N">Jiske-N</a></li>
+            <li>Blog: <a id="externallink" href="">Full-Stack Blog</a></li>
+            <li>Email: <a id="externallink" href="mailto:example@email.com">example@email.com</a></li>
         </ul>
     </footer>
     <!-- links to two js scripts

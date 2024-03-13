@@ -1,0 +1,109 @@
+/* variables for example main colour scheme for the page */
+:root {
+    --background-color-main: darkgrey;
+    --background-color-secondary: black;
+    --text-color-main: black;
+    --text-color-secondary: white;
+}
+
+/* set 1rem to 10px to easily find values for the rest of the page (ie. 1.5rem is 15px, 2.0rem is 20px, etc.) */
+html {
+    font-size: 62.5%;
+}
+
+/* settings for the entire document (1 step below root/html) */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Other settings for the whole document */
+body{
+    font-family: 'Courier New', Courier, monospace;
+    /* font-size: 1.6rem; */
+    color: var(--text-color-main);
+    background-color: var(--background-color-main);
+}
+
+/* base/universal h values */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color-main);
+    font-weight: 700;
+}
+
+/* specific text values */
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+p {
+    /* font-size: 1rem; -DON'T NEED TO SPECIFY- */
+}
+
+header {
+    border-bottom: 1rem var(--background-color-secondary) double;
+    height: 10rem;
+}
+
+/* used to set the height of the header */
+#toggle {
+    background-color: var(--background-color-main);
+    font-size: 4rem;
+    padding: 0 2.5rem;
+    border: none;
+}
+
+#button {
+    color: var(--text-color-secondary);
+}
+
+footer{
+    border-top: 1rem var(--background-color-secondary) double;
+    height: 10rem;
+}
+
+#footertag {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#UTF-8style {
+    font-size: 3rem;
+}
+
+#contactlinks li {
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#externallink {
+    font-weight: 400;
+    color: var(--text-color-main);
+    text-decoration: none;
+}
