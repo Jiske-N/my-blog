@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,8 @@
 </head>
 <body>
     <header>
-        <!-- sun code &#127774 moon code &#127762 -->
-        <button id="toggle" type="button" data-darktoggle="light">&#127774</button>
+        <!-- sun code &#127774 🌞 moon code &#127762 🌚 -->
+        <button id="toggle" type="button" data-themetoggle="light" aria-label="Toggle dark mode">🌞</button>
     </header>
     <main>
         <section id="left">
@@ -25,11 +25,11 @@
             <form action="addblogpost">
                 <h3>What's on your mind?</h3>
                 <label for="username">Username</label>
-                <input class="input" type="username" placeholder="Enter username">
+                <input class="input" id="usernameinput" type="username" placeholder="Enter username">
                 <label for="title">Title</label>
-                <input class="input" type="title" placeholder="Enter title">
+                <input class="input" id="titleinput" type="title" placeholder="Enter title">
                 <label for="content">Content</label>
-                <textarea class="input" name="content" placeholder="Enter content"></textarea>
+                <textarea class="input" id="contentinput" name="content" placeholder="Enter content"></textarea>
                 <input id="button" type="button" value="Submit">
             </form>
         </section>
