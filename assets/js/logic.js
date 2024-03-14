@@ -1,66 +1,37 @@
 const darkModeToggle = document.getElementById('toggle');
 const html = document.querySelector('html');
-const styleSheet = document.styleSheets[0];
-
-
-
-
-// let themeState = "light";
-
-// if (localStorage.getItem('theme') !== themeState ) {
-//     themeState = localStorage.getItem('theme')
-// };
-
-function setThemeColour() {
-    let themeState = localStorage.getItem('theme');
-    if (themeState === "light") {
-        themeState = "dark";
-        html.dataset.theme = themeState;
-        darkModeToggle.textContent = "🌚";
-        darkModeToggle.dataset.themetoggle = themeState;
-    } else  if (themeState === "dark") {
-        html.dataset.theme = themeState;
-        darkModeToggle.textContent = "🌞";
-        darkModeToggle.dataset.themetoggle = themeState;
-    }
-};
 
 darkModeToggle.addEventListener('click', (click) => {
     const toggleButton = click.target;
     const buttonState = toggleButton.getAttribute('data-themetoggle');
     
-    let themeState = localStorage.getItem('theme');
-    
+    let themeState = 0;
+
     if (buttonState === "light") {
-        themeState = 'dark';
-        localStorage.setItem('theme', themeState);
+        themeState = "dark";
+        darkModeToggle.textContent = "🌚";
     } else  if (buttonState === "dark") {
-        themeState = 'light';
-        localStorage.setItem('theme', themeState);
+        themeState = "light"
+        darkModeToggle.textContent = "🌞";
     }
-    setThemeColour();
+    html.dataset.theme = themeState;
+    toggleButton.dataset.themetoggle = themeState;
+    localStorage.setItem('theme', themeState);
 });
 
-setThemeColour();
+function savedTheme() {
+    const localStorageTheme = localStorage.getItem('theme');
 
+    if (localStorageTheme == "dark") {
+        darkModeToggle.textContent = "🌚";
+        html.dataset.theme = "dark";
+        darkModeToggle.dataset.themetoggle = "dark";
+        // doesn't function properly if the else part isn't included inconsistenly goes to no theme on the blog page.
+    } else {
+        darkModeToggle.textContent = "🌞";
+        html.dataset.theme = "light";
+        darkModeToggle.dataset.themetoggle = "light";
+    }
+};
 
-// darkModeToggle.addEventListener('click', (click) => {
-//     const toggleButton = click.target;
-//     const buttonState = toggleButton.getAttribute('data-themetoggle');
-    
-//     let themeState = "light";
-    
-
-//     if (buttonState === "light") {
-//         themeState = "dark";
-//         html.dataset.theme = themeState;
-//         darkModeToggle.textContent = "🌚";
-//         toggleButton.dataset.themetoggle = themeState;
-//         localStorage.setItem('theme', themeState);
-//     } else  if (buttonState === "dark") {
-//         html.dataset.theme = themeState;
-//         darkModeToggle.textContent = "🌞";
-//         toggleButton.dataset.themetoggle = themeState;
-//         localStorage.setItem('theme', themeState);
-//     }
-// });
+savedTheme();
