@@ -32,7 +32,6 @@ Other goals include:
 ## Potential Issues/Improvements
 
 - Adding media queries to adjust form screen so that on smaller devices the right element appears below the left.
-- Adding styling so that the first letter of username and title are automatically capitalised.
 - Condensing some of the code.
 - Unsure if the balance for commenting is about right or too sparse/many.
 - Trying to convert code to be uniform and follow best practice
