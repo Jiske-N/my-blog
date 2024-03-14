@@ -3,6 +3,9 @@ const usernameInput = document.getElementById('usernameinput');
 const titleInput = document.getElementById('titleinput');
 const contentInput = document.getElementById('contentinput');
 
+
+// works but overrides
+
 // submitButton.addEventListener('click', function(inputToLocalStorage) {
 //     inputToLocalStorage.preventDefault();
 
@@ -27,7 +30,8 @@ const contentInput = document.getElementById('contentinput');
 // ___________________________________________________________________________________
 
 function retrievePost() {
-    const oldPosts = JSON.parse(localStorage.getItem('posts'));
+    const oldPosts = JSON.parse(localStorage.getItem('post'));
+    // push get input!!!!!!!!!!!!!!!!!
     console.log(oldPosts);
     // if (newPost !== null) {
     //     blogPosts.push (newPost);
@@ -35,16 +39,19 @@ function retrievePost() {
     return oldPosts;
 };
 
-retrievePost();
+// retrievePost();
 
 submitButton.addEventListener('click', function(inputToLocalStorage) {
     inputToLocalStorage.preventDefault();
 
-    const blogPosts = [
+    let blogPosts = [
     ];
 
-    if (retrievePost() !== null) {
-    retrievePost().push (blogPosts);
+    // !!!
+    let oldPosts = retrievePost();
+
+    if (oldPosts !== null) {
+        blogPosts = oldPosts;
     };
 
     const inputToObject = {
@@ -62,9 +69,9 @@ submitButton.addEventListener('click', function(inputToLocalStorage) {
     } else {
         blogPosts.push(inputToObject);
         console.log(blogPosts);
-        localStorage.setItem('posts', JSON.stringify(blogPosts));
+        localStorage.setItem('post', JSON.stringify(blogPosts));
     };
-    // window.location='file:///C:/Users/jiske/Bootcamp/Week%204/my-blog/blog.html';
+    window.location='file:///C:/Users/jiske/Bootcamp/Week%204/my-blog/blog.html';
 });
 
 

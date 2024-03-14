@@ -6,20 +6,17 @@ const createH4 = document.createElement('h4');
 const createP = document.createElement('p');
 const createAside = document.createElement('aside');
 
-// function retrievePost() {
-//     const blogPosts = [
-//     ];
+// _______________________________________________________________________________________________
 
-//     const newPost = JSON.parse(localStorage.getItem('posts'));
+backButton.addEventListener('click', function () {
+    window.location='file:///C:/Users/jiske/Bootcamp/Week%204/my-blog/index.html';
+});
 
-//     if (newPost !== null) {
-//         blogPosts.push (newPost);
-//     };
-//     return blogPosts;
-// };
+// ___________________________________________________________________________________________________
 
 // function renderPost() {
-//     const blogPosts = retrievePost();
+//     // const blogPosts = retrievePost();
+//     const blogPosts = JSON.parse(localStorage.getItem('post'));
 
 //     for (let index = 0; index < blogPosts.length; index++) {
    
@@ -35,42 +32,30 @@ const createAside = document.createElement('aside');
 //     }
 // };
 
-// retrievePost();
 // renderPost();
 
-backButton.addEventListener('click', function () {
-    window.location='file:///C:/Users/jiske/Bootcamp/Week%204/my-blog/index.html';
-});
-
-function retrievePost() {
-    const newPost = JSON.parse(localStorage.getItem('posts'));
-
-    // if (newPost !== null) {
-    //     blogPosts.push (newPost);
-    // };
-    return newPost;
-};
+// __________________________________________________________________________________________________________
 
 function renderPost() {
-    const blogPosts = retrievePost();
+    const blogPosts = JSON.parse(localStorage.getItem('post'));
+    const blog = document.getElementById('blogposts');
 
     for (let index = 0; index < blogPosts.length; index++) {
-   
-        blog.appendChild(createArticle);
-        createArticle.appendChild(createH4, createP, createAside);
-        createArticle.appendChild(createP);
-        createArticle.appendChild(createAside);
-    
-        console.log(blogPosts);
+        const createArticle = document.createElement('article');
+        const createH4 = document.createElement('h4');
+        const createP = document.createElement('p');
+        const createAside = document.createElement('aside');
+
         createH4.textContent = blogPosts[index].title;
         createP.textContent = blogPosts[index].content;
-        createAside.textContent = (`Posted by: ${blogPosts[index].username}`);
+        createAside.textContent = `Posted by: ${blogPosts[index].username}`;
+
+        createArticle.appendChild(createH4);
+        createArticle.appendChild(createP);
+        createArticle.appendChild(createAside);
+
+        blog.appendChild(createArticle);
     }
 };
 
-retrievePost();
 renderPost();
-
-backButton.addEventListener('click', function () {
-    window.location='file:///C:/Users/jiske/Bootcamp/Week%204/my-blog/index.html';
-});
