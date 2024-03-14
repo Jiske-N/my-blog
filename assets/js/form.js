@@ -26,9 +26,9 @@ submitButton.addEventListener('click', function () {
 
     // part 2
     const inputToObject = {
-        username: usernameInput.value,
-        title: titleInput.value,
-        content: contentInput.value,
+        username: usernameInput.value.charAt(0).toUpperCase() + usernameInput.value.slice(1),
+        title: titleInput.value.charAt(0).toUpperCase() + titleInput.value.slice(1),
+        content: contentInput.value.charAt(0).toUpperCase() + contentInput.value.slice(1),
     };
 
     if (usernameInput.value == "") {
