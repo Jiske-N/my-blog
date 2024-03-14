@@ -50,6 +50,8 @@ Other learnings include:
 
 If you find any issues or have contributions or feedback you can do so by opening an [issue](https://github.com/Jiske-N/my-blog/issues) on Github.
 
+I was struggling to get the function at line 10 in the blog.js to function and it was rewritten by the Xpert Learning Assistant.
+
 ## Credits
 
 Mockup provided by edX/Monash University

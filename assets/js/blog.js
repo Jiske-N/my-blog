@@ -1,11 +1,6 @@
 // const blog = document.getElementById('blogposts');
 const backButton = document.getElementById('button');
 
-// const createArticle = document.createElement('article');
-// const createH4 = document.createElement('h4');
-// const createP = document.createElement('p');
-// const createAside = document.createElement('aside');
-
 // navigate back to blog form
 backButton.addEventListener('click', function () {
     window.location = './index.html';
