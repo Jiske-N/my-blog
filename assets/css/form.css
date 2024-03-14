@@ -1,11 +1,13 @@
 /*header height is set in styles.css */
 header {
+    box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
     height: 10vh;
 }
 
 main {
+    box-sizing: border-box;
     height: 90vh;
     display: flex;
 }
