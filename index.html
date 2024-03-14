@@ -1,43 +1,51 @@
 <!DOCTYPE html>
+<!-- data attribute for dark mode -->
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Form</title>
     <!-- links to two css sheets 
         the first is for common elements between both pages 
         the second is for styles specific to the index/form/home page -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/form.css">
 </head>
+
 <body>
     <header>
-        <!-- sun code &#127774 🌞 moon code &#127762 🌚 -->
+        <!-- data attribute for dark mode toggle icon sun code &#127774 🌞 moon code &#127762 🌚 -->
         <button id="toggle" type="button" data-themetoggle="light" aria-label="Toggle dark mode">🌞</button>
     </header>
     <main>
+        <!-- left side of screen -->
         <section id="left">
             <div id="circle" aria-label="yellow circle image/background">
-                    <h1>My First Blog</h1>
+                <h1>My First Blog</h1>
             </div>
         </section>
+        <!-- right side of screen -->
         <section id="right">
             <form action="addblogpost">
                 <h3>What's on your mind?</h3>
                 <label for="username">Username</label>
-                <input class="input" id="usernameinput" type="username" placeholder="Enter username">
+                <input class="input" id="username" name="username" type="text" placeholder="Enter username"
+                    autocomplete="username">
                 <label for="title">Title</label>
-                <input class="input" id="titleinput" type="title" placeholder="Enter title">
+                <input class="input" id="title" name="title" type="text" placeholder="Enter title">
                 <label for="content">Content</label>
-                <textarea class="input" id="contentinput" name="content" placeholder="Enter content"></textarea>
+                <textarea class="input" id="content" name="content" placeholder="Enter content"></textarea>
                 <input id="button" type="button" value="Submit">
             </form>
         </section>
     </main>
     <!-- links to two js scripts
-    the first is for elements specific to this page
-    the second is for elements across both pages -->
-    <script src="./assets/js/form.js"></script>
+        the first is for elements across both pages
+        the second is for elements specific to this page
+     -->
     <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
 </body>
+
 </html>

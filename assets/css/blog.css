@@ -1,4 +1,4 @@
-/* height is set in styles.css */
+/*header height is set in styles.css */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,7 @@ header h2 {
     background-color: var(--background-color-secondary);
 }
 
-/* styling for main which is to be added by js */
+/* styling for main content which is to be added by js */
 
 /* min height is to maintain stying/appearance not link to min height in child p */
 #blogposts article {
