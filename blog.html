@@ -1,41 +1,51 @@
 <!DOCTYPE html>
+<!-- data attribute for dark mode -->
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Posts</title>
     <!-- links to two css sheets 
-        the first is for common elements between both pages 
-        the second is for styles specific to the blog page -->
+    the first is for common elements between both pages 
+    the second is for styles specific to the blog page -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/blog.css">
 </head>
+
 <body>
     <header>
         <h2>My First Blog</h2>
         <div id="headerright">
             <input id="button" type="button" value="&#11013 Back ">
-        <!-- sun code &#127774 🌞 moon code &#127762 🌚 -->
-        <button id="toggle" type="button" data-theme-toggle="light" aria-label="Toggle dark mode">🌞</button>
+            <!-- data attribute for dark mode toggle icon sun code &#127774 🌞 moon code &#127762 🌚 -->
+            <button id="toggle" type="button" data-theme-toggle="light" aria-label="Toggle dark mode">🌞</button>
         </div>
     </header>
     <main>
         <div id="blogposts">
-            <!-- this is to contain the posts added by js -->
+            <!-- this is to contain the posts added by js structured as shown by examples below-->
+            <!-- <article class="exampleonly"> -->
+                <!-- <h4 class="exampleonly"></h4> -->
+                <!-- <p class="exampleonly"></p> -->
+                <!-- <aside class="exampleonly"></aside> -->
+            <!-- </article> -->
         </div>
     </main>
     <footer>
         <p id="footertag">Made with a <span id="UTF-8style">&#128187</span> by Jiske</p>
         <ul id="contactlinks">
             <li>Portfolio: <a id="externallink" href="https://github.com/Jiske-N">Jiske-N</a></li>
-            <li>Blog: <a id="externallink" href="">Full-Stack Blog</a></li>
+            <!-- placeholder link to be updated in the future -->
+            <li>Blog: <a id="externallink" href="https://github.com/Jiske-N">Full-Stack Blog</a></li>
             <li>Email: <a id="externallink" href="mailto:example@email.com">example@email.com</a></li>
         </ul>
     </footer>
     <!-- links to two js scripts
-    the first is for elements specific to this page
-    the second is for elements across both pages -->
+    the first is for elements across both pages
+    the second is for elements specific to this page -->
     <script src="./assets/js/blog.js"></script>
     <script src="./assets/js/logic.js"></script>
 </body>
+
 </html>

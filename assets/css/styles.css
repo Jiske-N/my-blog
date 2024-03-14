@@ -1,14 +1,8 @@
-/* variables for example main colour scheme for the page */
-/* :root {
-    --background-color-main: darkgrey;
-    --background-color-secondary: black;
-    --text-color-main: black;
-    --text-color-secondary: white;
-} */
+/* variables for colour scheme affecting html element in place of :root */
 
 /* light mode */
 [data-theme="light"] {
-    --background-color-main: darkgrey;
+    --background-color-main: lightgrey;
     --background-color-secondary: black;
     --text-color-main: black;
     --text-color-secondary: white;
@@ -17,7 +11,7 @@
 /* dark mode */
 [data-theme="dark"] {
     --background-color-main: black;
-    --background-color-secondary: darkgrey;
+    --background-color-secondary: lightgrey;
     --text-color-main: white;
     --text-color-secondary: black;
 }
@@ -28,15 +22,14 @@ html {
 }
 
 /* settings for the entire document (1 step below root/html) */
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
 /* Other settings for the whole document */
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
-    /* font-size: 1.6rem; */
     color: var(--text-color-main);
     background-color: var(--background-color-main);
 }
@@ -77,16 +70,12 @@ h6 {
     font-size: 1.5rem;
 }
 
-p {
-    /* font-size: 1rem; -DON'T NEED TO SPECIFY- */
-}
-
 header {
     border-bottom: 1rem var(--background-color-secondary) double;
     height: 10rem;
 }
 
-/* used to set the height of the header */
+/* dark mode button */
 #toggle {
     background-color: var(--background-color-main);
     font-size: 4rem;
@@ -94,11 +83,14 @@ header {
     border: none;
 }
 
+/* form button on index.html & back button on blog.html */
 #button {
     color: var(--text-color-secondary);
 }
 
-footer{
+/* consider adding the footer from blog.html to the form page in the future
+if so the height here will need to be adjusted to vh and the header / body vh on form.css will need adjusting accordingly */
+footer {
     border-top: 1rem var(--background-color-secondary) double;
     height: 10rem;
 }
@@ -108,14 +100,20 @@ footer{
     text-align: center;
 }
 
+/* styling for character images in footer */
 #UTF-8style {
     font-size: 3rem;
+}
+
+#contactlinks {
+    padding: 0 0 1.5rem 2rem;
 }
 
 #contactlinks li {
     font-style: italic;
     font-size: 2rem;
     font-weight: 700;
+    list-style-type: none;
 }
 
 #externallink {
