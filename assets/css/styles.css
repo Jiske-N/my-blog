@@ -1,9 +1,25 @@
 /* variables for example main colour scheme for the page */
-:root {
+/* :root {
     --background-color-main: darkgrey;
     --background-color-secondary: black;
     --text-color-main: black;
     --text-color-secondary: white;
+} */
+
+/* light mode */
+[data-theme="light"] {
+    --background-color-main: darkgrey;
+    --background-color-secondary: black;
+    --text-color-main: black;
+    --text-color-secondary: white;
+}
+
+/* dark mode */
+[data-theme="dark"] {
+    --background-color-main: black;
+    --background-color-secondary: darkgrey;
+    --text-color-main: white;
+    --text-color-secondary: black;
 }
 
 /* set 1rem to 10px to easily find values for the rest of the page (ie. 1.5rem is 15px, 2.0rem is 20px, etc.) */
